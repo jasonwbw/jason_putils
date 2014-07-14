@@ -10,9 +10,27 @@ This is a tool for opearation on chinese or english with chinese
 import re
 
 def contain_english(s):
+	'''
+	Check if the sentence contains english
+
+	Args:
+	    s : sentence to check
+
+	Returns:
+	    contains or not
+	'''
 	return re.search(ur'[a-zA-Z]+', s) != None
 
 def contain_chinese(s):
+	'''
+	Check if the sentence contains chinese
+
+	Args:
+	    s : sentence to check
+
+	Returns:
+	    contains or not
+	'''
 	return re.search(ur'[\u4e00-\u9fa5]+', s) != None
 
 if __name__ == '__main__':
