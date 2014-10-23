@@ -8,6 +8,16 @@ This is a tool for solve the Longest common subsequence problem with the dynamic
 '''
 
 def lcs_len(s1, s2):
+    '''
+    LCS by 2d matrix dp
+
+    Args:
+        s1 : list or string
+        s2 : list or string
+
+    Returns:
+        Longest common subsequence
+    '''
     if s1 == None or s2 == None: return 0
     len1, len2 = len(s1), len(s2)
     dp = [ [0 for i in xrange(len2 + 1)] for j in xrange(len1 + 1)]
@@ -20,6 +30,16 @@ def lcs_len(s1, s2):
     return dp[len1][len2]
 
 def lcs_len_effective(s1, s2):
+    '''
+    LCS by two 1d matrix dp
+
+    Args:
+        s1 : list or string
+        s2 : list or string
+
+    Returns:
+        Longest common subsequence
+    '''
     if s1 == None or s2 == None: return 0
     len1, len2 = len(s1), len(s2)
     dp_i, dp_j = [0 for i in xrange(len2 + 1)], [0 for i in xrange(len1 + 1)]
@@ -33,6 +53,16 @@ def lcs_len_effective(s1, s2):
     return dp_i[-1]
 
 def lcs_len_res(s1, s2):
+    '''
+    LCS by 2d matrix dp, and get one result
+
+    Args:
+        s1 : list or string
+        s2 : list or string
+
+    Returns:
+        one of the Longest common subsequence
+    '''
     if s1 == None or s2 == None: return 0
     len1, len2 = len(s1), len(s2)
     dp = [ [0 for i in xrange(len2 + 1)] for j in xrange(len1 + 1)]
